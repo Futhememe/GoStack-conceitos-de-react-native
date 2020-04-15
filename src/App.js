@@ -25,8 +25,8 @@ export default function App() {
 
     const likedRepository = response.data;
 
-    const repositoriesUpdated = repositories.map(repository =>{
-      if(repository.id === id){
+    const repositoriesUpdated = repositories.map(repository => {
+      if (repository.id === id) {
         return likedRepository
       } else repository;
     });
@@ -59,8 +59,8 @@ export default function App() {
                   style={styles.likeText}
                   testID={`repository-likes-${repository.id}`}
                 >
-                  {repository.likes} curtidas
-              </Text>
+                  {repository.likes} curtida{repository.likes > 1 ? 's' : ''}
+                </Text>
               </View>
 
               <TouchableOpacity
